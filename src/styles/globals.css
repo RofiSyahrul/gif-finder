@@ -1,0 +1,35 @@
+:root {
+  --color-bg-default: #fff;
+  --color-bg-grey: rgba(196, 196, 196, 0.4);
+  --color-border: #a8a8a8;
+  --color-text-action: #333638;
+  --color-text-default: #393A3A;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  background: url('/background.png') top;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input {
+  font-size: 16px;
+}
