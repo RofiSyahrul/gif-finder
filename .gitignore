@@ -14,6 +14,10 @@
 
 # production
 /build
+public/browserconfig.xml
+public/manifest.json
+public/sw*
+public/workbox-*
 
 # misc
 .DS_Store

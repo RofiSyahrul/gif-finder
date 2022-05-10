@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate-manifest": "node scripts/generate-manifest",
+    "predev": "yarn generate-manifest",
     "dev": "PORT=2805 next dev",
+    "prebuild": "yarn generate-manifest",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
