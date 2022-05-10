@@ -12,10 +12,15 @@ function Home() {
   const { push } = useRouter();
 
   const handleSubmit = useCallback<FormEventHandler<HTMLFormElement>>(e => {
+    e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const gifQuery = formData.get('gifQuery')?.toString();
-    if (!gifQuery) return;
-    push({ pathname: '/search', query: { q: gifQuery }});
+    const pathname = '/search';
+    if (gifQuery) {
+      push({ pathname, query: { q: gifQuery }});
+    } else {
+      push(pathname);
+    }
   }, [push]);
 
   return (

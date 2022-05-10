@@ -11,6 +11,9 @@
 
 .container h1 {
   color: var(--color-text-default);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 35px;
 }
 
 .container form {
