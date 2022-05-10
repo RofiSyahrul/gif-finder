@@ -18,6 +18,7 @@ public/browserconfig.xml
 public/manifest.json
 public/sw*
 public/workbox-*
+public/fallback-*
 
 # misc
 .DS_Store

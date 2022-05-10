@@ -73,6 +73,7 @@ export default function SearchResult({ gifQuery, images }: SearchResultProps) {
               loading='lazy'
               placeholder='blur'
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(image.width, image.height))}`}
+              objectFit='contain'
             />
           </a>
         ))}
