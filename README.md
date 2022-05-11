@@ -1,34 +1,47 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+This is a proof of concept for Progressive Web Apps (PWA) with Next.js.
+
+[Demo](https://gif.rofisyahrul.com).
+
+
 ## Getting Started
 
-First, run the development server:
+First, create `.env.local` file by copying `.env.example` file content
 
 ```bash
-npm run dev
-# or
+cp .env.example .env.local
+```
+
+Then, create your Giphy Api Key [here](https://developers.giphy.com/dashboard/). Use the api key as a value of env variable `NEXT_PUBLIC_GIPHY_API_KEY` in `.env.local` file.
+
+Run the development server:
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:2805](http://localhost:2805) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Try PWA Functionality
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Build the app using this command:
 
-## Learn More
+```bash
+yarn build
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Run the production server on your local:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+PORT=2905 yarn start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Open [http://localhost:2905](http://localhost:2905) with your browser.
+4. Try to move to search page by hitting enter on the text field.
+5. Open network tab on your browser devtools and simulate the network condition to offline.
+6. Refresh the search page.
+7. Try to move back to homepage by clicking the header `"Back to Home"`.
+8. Input a search keyword on the text field and hit enter. The app will move to search page with the inputted search keyword.
+9. Refresh the search page. It should show  `"No internet connection."`.
